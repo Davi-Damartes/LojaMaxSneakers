@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackendApi.Models
 {
@@ -9,7 +10,7 @@ namespace BackendApi.Models
         public string Nome { get; set; } = string.Empty;
 
         [Required]
-        [Range(0, 10000, ErrorMessage = "O preço deve ser um valor positivo.")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Preco { get; set; }
 
     }

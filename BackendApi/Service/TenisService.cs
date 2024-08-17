@@ -15,7 +15,7 @@ namespace BackendApi.Service
 
         public async Task<IEnumerable<Tenis>> ObterTenis( )
         {
-            return await _context.Tenis.AsNoTracking().ToListAsync();
+            return await _context.Tenis.AsNoTracking(). ToListAsync();
         }
 
         public async Task<Tenis> ObterTenisPorId(Guid Id)
@@ -33,6 +33,8 @@ namespace BackendApi.Service
             _context.Entry(tenis).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+
+
         public async Task DeletarTenis(Tenis tenis)
         {
             _context.Tenis.Remove(tenis);

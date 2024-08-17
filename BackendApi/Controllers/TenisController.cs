@@ -24,7 +24,7 @@ namespace BackendApi.Controllers
             var tenis = await _tenisService.ObterTenisPorId(Id);
             if(tenis == null)
             {
-                return NotFound("Tênis não encontrado");
+                return NotFound("Tênis não encontrado!");
             }
 
             return Ok(tenis);
@@ -38,7 +38,7 @@ namespace BackendApi.Controllers
             var tenis = await _tenisService.ObterTenis();
             if(tenis == null)
             {
-                return NotFound();
+                return NotFound("Tênis não encontrado!");
             }
 
             return Ok(tenis);
@@ -54,7 +54,7 @@ namespace BackendApi.Controllers
 
             if (tenisCadastrado != null)
             {
-                return BadRequest("Tênis já cadastrado");
+                return BadRequest("Tênis já cadastrado!");
             }
 
             await _tenisService.AdicionarTenis(tenis);
@@ -80,5 +80,22 @@ namespace BackendApi.Controllers
             return Ok($"Tenis com id={tenis.Id} foi atualizado com sucesso!");
         }
 
+
+        [HttpDelete("ExluirTenis/{Id:Guid}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> ExcluitTenisPorId(Guid Id)
+        {
+            Tenis tenisCadastrado = await _tenisService.ObterTenisPorId(Id);
+
+            if (tenisCadastrado == null)
+            {
+                return NotFound("Tênis não encontrado!");
+            }
+
+            await _tenisService.DeletarTenis(tenisCadastrado);
+            return Ok($"Tenis com id={tenisCadastrado.Id} foi excluído com sucesso!");
+        }
     }
 }

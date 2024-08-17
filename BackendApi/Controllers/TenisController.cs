@@ -17,6 +17,8 @@ namespace BackendApi.Controllers
 
 
         [HttpGet("{Id:Guid}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Tenis>> ObterUmTenis(Guid Id)
         {
             var tenis = await _tenisService.ObterTenisPorId(Id);
@@ -28,6 +30,8 @@ namespace BackendApi.Controllers
         }
         
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<Tenis>>> ObterTenis()
         {
             var tenis = await _tenisService.ObterTenis();

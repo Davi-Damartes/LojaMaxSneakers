@@ -1,4 +1,5 @@
-﻿using BackendApi.Service;
+﻿using BackendApi.Models;
+using BackendApi.Service;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -15,8 +16,19 @@ namespace BackendApi.Controllers
         }
 
 
+        [HttpGet("{Id:Guid}")]
+        public async Task<ActionResult<Tenis>> ObterUmTenis(Guid Id)
+        {
+            var tenis = await _tenisService.ObterTenisPorId(Id);
+            if(tenis == null)
+            {
+                return NotFound("Tênis não encontrado");
+            }
+            return Ok(tenis);
+        }
+        
         [HttpGet]
-        public async Task<IActionResult> ObterTenis( )
+        public async Task<ActionResult<IEnumerable<Tenis>>> ObterTenis()
         {
             var tenis = await _tenisService.ObterTenis();
             if(tenis == null)
@@ -25,5 +37,8 @@ namespace BackendApi.Controllers
             }
             return Ok(tenis);
         }
+
+
+
     }
 }

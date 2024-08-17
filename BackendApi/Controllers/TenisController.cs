@@ -45,7 +45,7 @@ namespace BackendApi.Controllers
         }
 
 
-        [HttpPost("AdicionarTenis/")]
+        [HttpPost("AdicionarTenis")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Tenis>> AddTenis(Tenis tenis)
@@ -59,6 +59,25 @@ namespace BackendApi.Controllers
 
             await _tenisService.AdicionarTenis(tenis);
             return Created($"Tenis Adicionado com sucesso!", tenis);
+        } 
+        
+        [HttpPut("Editar/{Id:Guid}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> EditarTenis(Guid Id, Tenis tenis)
+        {
+            Tenis tenisCadastrado = await _tenisService.ObterTenisPorId(Id);
+
+            if (tenisCadastrado == null)
+            {
+                return NotFound("Tênis não encontrado!");
+            }
+            tenisCadastrado.Nome = tenis.Nome;
+            tenisCadastrado.Preco = tenis.Preco;
+
+            await _tenisService.EditarTenis(tenisCadastrado);
+            return Ok($"Tenis com id={tenis.Id} foi atualizado com sucesso!");
         }
 
     }

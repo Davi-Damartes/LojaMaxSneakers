@@ -1,7 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/BackendApi/Migrations/
+BackendApi/Migrations/
 **/Migrations/
+
+BackendApi/Migrations/20240816204752_Initial.cs
+BackendApi/Migrations/20240816204752_Initial.Designer.cs
+BackendApi/Migrations/20240816205831_AddDados.cs
+BackendApi/Migrations/20240816205831_AddDados.Designer.cs
+BackendApi/Migrations/AppDbContextModelSnapshot.cs
 
 # dependencies
 /node_modules

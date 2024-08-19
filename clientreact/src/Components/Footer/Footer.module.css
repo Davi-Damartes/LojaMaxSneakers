@@ -1,0 +1,14 @@
+.footer {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.5rem;
+    border-top: 3px solid rgba(114, 114, 114, 0.133);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

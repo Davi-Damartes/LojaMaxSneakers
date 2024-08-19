@@ -1,59 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 100px;
     border-bottom: 1px solid rgba(114, 114, 114, 0.133);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    top: 0;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
-    padding-right: 50px;
-}
-.header .line {
-    border-left: 2px solid rgba(114, 114, 114, 0.133);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    height: 100%; 
-    margin-left: 1px;
+    padding: 30px 10%;
+    z-index: 9999;
+    background-color: #ffffff;
 }
 
-.header .logo {
-    width: 80px;
-    padding: 1rem;
-    height: 28px;
-    align-items: center;
-}
-
-.header .titulos {
-    flex-grow: 2; 
-    padding: 1rem;
-    color: green;
+.navlinks .li {
+    display: inline-block;
+    font-family: "Montserrant", sans-serif;
+    font-weight: 500;
     font-size: 24px;
+    padding: 0 90px;
+    
 }
 
-.header .blocos {
-    width: 80px;
-    height: 28px;
-    padding: 1.5rem;
+.navlinks .li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #240404;
+}
+
+.navlinks .li a:hover{
+    color: #35cc30;
+}
+
+.iconButtons{
+    display: flex;
+}
+
+.botaoIcones:hover{
+    color: rgb(28, 218, 11);
+}   
+
+/* .header .line {
+    border-left: 1px solid rgba(114, 114, 114, 0.133);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin: 0 10px;
+}
+.navContainer {
+    flex: 3; 
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro do container de navegação */
+/* } */
+
+/* .header .navlinks{
+    display: flex;
+    list-style: none;
+    width: 20%;
+}
+
+.navlinks li{
+    display: flex;
+    padding: 0 20px;
+    transition: all 0.4s ease 0s;
+}
+
+.navlinks li:hover{
+    color: rgb(226, 142, 17);
+}
+
+
+.iconButtons {
+    display: flex;
     align-items: center;
-}
-
-.header .botaoIcones {
-    flex-grow: 1; 
-    padding: 2rem;
-    width: 50px;
-    height: 50px;
-    border: none;
-    margin: none;
-    background-color: white;
-}
-
-.header .icones {
-   align-items: center;
-    padding: 2rem;
-    width: 50px;
-    height: 50px;
-    border: none;
-    margin: none;
-    background-color: white;
-}
+}  */

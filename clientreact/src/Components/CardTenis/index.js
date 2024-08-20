@@ -1,16 +1,15 @@
 import styles from "./CardTenis.module.css"
 import Card from 'react-bootstrap/Card';
 
-function CardTenis( {imagens} ) {
-    let titulo = "Texto";
-    let conteudo = "Conteúdo";
+function CardTenis( {imagens, titulo, descricao, preco } ) {
     return(
         <section>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '12rem' }} >
                 <Card.Img variant="top" src={imagens} />
                 <Card.Body>
                     <Card.Title>{titulo}</Card.Title>
-                    <Card.Text>{conteudo}</Card.Text>
+                    <Card.Text>{descricao}</Card.Text>
+                    <Card.Text className="text-success">R$ {preco}</Card.Text>
                 </Card.Body>
             </Card>
         </section>

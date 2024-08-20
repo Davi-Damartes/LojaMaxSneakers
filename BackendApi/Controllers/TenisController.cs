@@ -75,6 +75,7 @@ namespace BackendApi.Controllers
             }
             tenisCadastrado.Nome = tenis.Nome;
             tenisCadastrado.Preco = tenis.Preco;
+            tenisCadastrado.Descricao = tenis.Descricao;
 
             await _tenisService.EditarTenis(tenisCadastrado);
             return Ok($"Tenis com id={tenis.Id} foi atualizado com sucesso!");

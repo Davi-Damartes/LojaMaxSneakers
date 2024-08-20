@@ -12,19 +12,5 @@ namespace BackendApi.Data
         public DbSet<Tenis> Tenis { get; set; }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Tenis>().HasData(
-                new Tenis
-                {
-                    Nome = "AirMax",
-                    Preco = 899.99M
-                },
-                new Tenis
-                {
-                    Nome = "Puma Disk",
-                    Preco = 1299.99M
-                });
-        }
     }
 }

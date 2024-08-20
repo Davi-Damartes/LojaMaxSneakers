@@ -11,6 +11,10 @@ namespace BackendApi.Models
         public string Nome { get; set; } = string.Empty;
 
         [Required]
+        [StringLength(300, ErrorMessage = "Limite de 300 caracteres")]
+        public string Descricao { get; set; } = string.Empty;
+
+        [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Preco { get; set; }
 

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import axios from 'axios';
@@ -10,32 +11,44 @@ import tenisBranco from "./imagemTenis/TenisBranco.jpeg";
 import tenisLaranja from "./imagemTenis/TenisLaranja.jpeg";
 import tenisPretoRosa from "./imagemTenis/TenisPretoRosa.jpeg";
 import Footer from './Components/Footer';
+import { baseUrl } from './Contexts/Url';
 
+const tenis = [{tenisBranco}, {tenisLaranja}, {tenisPretoRosa}]
 
 function App() {
+
+  const [data, setData] = useState([]);
+
+  const pedidoGet=async()=>{
+    await axios.get(baseUrl)
+    .then(response =>{
+      setData(response.data);
+    }).catch(error=>{
+      console.log(error);
+    })
+
+  }
+
+  useEffect(()=> {
+        pedidoGet();
+  })
+
+
+
   return (
     <div className="App">
       <Header />
       <CarouselTenis />
       <Container >
-         { <CardTenis imagens={tenisPretoRosa} /> }
-
-         { <CardTenis imagens={tenisLaranja}/> }
-
-         { <CardTenis imagens={tenisBranco} /> }
-
-         { <CardTenis imagens={tenisLaranja} /> }
-
-         { <CardTenis imagens={tenisPretoRosa} /> }
-
-         { <CardTenis imagens={tenisBranco} /> }
-
-         { <CardTenis imagens={tenisLaranja} /> }
-
-         { <CardTenis imagens={tenisPretoRosa} /> }
+        {
+          data.map((dados) =>
+             <CardTenis imagens={tenisLaranja} 
+                        titulo={dados.nome} 
+                        descricao={dados.descricao}
+                        preco={dados.preco}/>)
+        }
 
       </Container>
-
       <Footer />
     </div>
   );

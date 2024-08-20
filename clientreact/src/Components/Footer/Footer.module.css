@@ -12,3 +12,8 @@
     border-top: 3px solid rgba(114, 114, 114, 0.133);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.footer h2{
+    font-size: 1rem;
+    font-weight: 500;
+}

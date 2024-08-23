@@ -1,10 +1,9 @@
 .container{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    align-content: center;
-    gap: 90px;
+    gap: 40px;
     width: 80%;
-    min-height: 92.2vh;
     margin: 0 auto;
-    padding-block: 100px;
+    padding-block: 80px;
 }

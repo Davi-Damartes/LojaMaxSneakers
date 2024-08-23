@@ -1,0 +1,30 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modalFooter button:nth-child(1) {
+    background-color: blue !important;
+    border: none;
+    color: #FFFFFF !important;
+}
+.modalFooter button:nth-child(2) {
+    background-color: green !important;
+    border: none;
+    color: #FFFFFF 
+}

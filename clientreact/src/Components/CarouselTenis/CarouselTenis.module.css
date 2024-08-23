@@ -1,12 +1,26 @@
-.carousel{
+.container {
+    display: flex;
     padding-top: 100px;
+    border-radius: 10px;
+    justify-content: center;
     width: 100%;
-    height: 600px;
-    background-color: #b0b5bb;
+    background-color: blanchedalmond;
 }
 
+.carousel{  
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
 .imagens {
-    width: 820px;
-    height: 460px;
-    object-fit: cover; 
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.textos h5, p{
+    color: rgb(236, 236, 236);
+    text-align: center;
 }

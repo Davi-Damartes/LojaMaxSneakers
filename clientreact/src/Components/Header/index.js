@@ -1,4 +1,4 @@
-import { Box, Button, Icon, IconButton, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import styles from "./Header.module.css"
 import logo from "../../Icons/Nike.jpg"
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,8 +8,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 function Header() {
     return (
         <header className={styles.header}>
-            <img className={styles.logo} src={logo} />
-                 
+            
+            <a href="/"><img className={styles.image} alt="logo" src={logo} /></a>             
             <nav>
                 <ul className={styles.navlinks}>
                     <li className={styles.li}>
@@ -21,19 +21,21 @@ function Header() {
                     <li className={styles.li}>
                         <a href="/">Jordan</a>
                     </li>
-
+                    <li className={styles.li}>
+                        <a href="/">Puma</a>
+                    </li>
                 </ul>
             </nav>  
 
-            <div className={styles.iconButtons}>
+            <div className={styles.Icones}>
                 <Button className={styles.botaoIcones} aria-label="search" >
-                    <SearchIcon />
+                    <SearchIcon className={styles.icones}  />
                 </Button>
                 <Button className={styles.botaoIcones} aria-label="search" >
-                    <FavoriteBorderIcon />
+                    <FavoriteBorderIcon className={styles.icones} />
                 </Button>
                 <Button className={styles.botaoIcones} aria-label="search" >
-                    <ShoppingCartOutlinedIcon />
+                    <ShoppingCartOutlinedIcon className={styles.icones} />
                 </Button>
             </div>
         </header>

@@ -66,7 +66,7 @@ function ModalComponent( {id, nome, descricao, preco} ){
 
     return(
         <>
-        <Button variant="primary" onClick={abrirModal}>
+        <Button className={styles.botaoEditar} onClick={abrirModal}>
           Editar 
         </Button>
   
@@ -102,16 +102,18 @@ function ModalComponent( {id, nome, descricao, preco} ){
                 <Form.Control 
                       name="descricao"
                       as="textarea" 
-                      maxLength={300}
-                      rows={3} 
+                      minLength={5}
+                      maxLength={100}
+                      rows={2} 
                       value={tenisSelecionado.descricao}
                       onChange={handleChange}         
                 />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="preco">
+              <Form.Group className={styles.formGroup} controlId="preco">
                 <Form.Label>Preço</Form.Label>
-                <Form.Control    
+                <Form.Control   
+                  className={styles.formControl} 
                   name="preco"      
                   max={1000}
                   min={500}

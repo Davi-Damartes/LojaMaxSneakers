@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import styles from "./Header.module.css"
-import logo from "../../Icons/Nike.jpg"
+import logo from "../../LogoNike/Nike.jpg"
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';

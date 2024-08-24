@@ -4,37 +4,50 @@
 
 .card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 222px;
-    height: 540px;
+    height: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: whitesmoke;
 }
 
-.cardBody{
-    display: grid;
+.image {
+    width: 220px;
+    height: 304px;
 }
 
-
-.id {
-    word-break: break-all;
+.cardBody {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-family: "Outfit", sans-serif;
-    color: black;
-
+    width: 220px;
+    height: 316px;
 }
 
-.title {
+.cardBody .title {
+    height: 86px;
+    width: 188px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.30rem;
     font-family: "Anton", sans-serif;
 }
-.text {
+
+.cardBody .descricao {
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
     text-align: center;
-    padding-top: 1rem;
     font-family: "Outfit", sans-serif;
     color: black;
+    height: 150px;
+
 }
-.price {
+
+.cardBody .price {
     padding-top: 1rem;
     font-size: 1.75rem;
     text-align: center;
@@ -42,7 +55,12 @@
     color: black;
 }
 
-.botao{
-    color: blueviolet;
-    margin: auto;
-}
+
+
+/* .id {
+    word-break: break-all;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    color: black;
+
+} */

@@ -40,7 +40,6 @@
 }
 
 
-
 .navlinks a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
@@ -81,14 +80,52 @@
 }   
 
 
-
-@media (max-width: 1205px){
+@media (max-width: 1205px) {
     .header {
-        flex-direction: column; 
-        justify-content: center; 
-        height: 166px;
-        padding-top: 16px; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Permite que o header ajuste a altura conforme o conteúdo */
+        padding-top: 16px;
     }
-    .image {margin-bottom: 1rem;}
 
+    .image {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 778px) {
+    .header {
+        padding-top: 20px;  
+    }
+
+    .navlinks { 
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        justify-content: center; /* Centraliza os itens no contêiner */
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .navlinks .li { 
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 2.5rem;
+        padding-inline: 60px; 
+        list-style: none;
+        text-decoration: none;
+        flex: 1 1 50%; /* Cada item ocupa 50% da linha, permitindo dois por linha */
+        text-align: center;
+        box-sizing: border-box; /* Garante que padding seja incluído na largura total */
+    }
+
+    .navlinks .li:first-child { 
+        margin-left: 0;
+    }
+
+    .navlinks a {
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
+        color: #FFA07A;
+    }
 }

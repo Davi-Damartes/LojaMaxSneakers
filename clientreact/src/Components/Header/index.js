@@ -24,6 +24,7 @@ function Header() {
                     <li className={styles.li}>
                         <a href="/">Puma</a>
                     </li>
+                    
                 </ul>
             </nav>  
 

@@ -17,6 +17,8 @@ import tenisBrancoLaranja from "../../imagemTenis/TenisBrancoLaranja.jpeg";
 import tenisAllWhite from "../../imagemTenis/TenisAllWhite.jpeg";
 import tenisLaranjaBranco from "../../imagemTenis/TenisLaranjaBranco.jpeg";
 
+import ModalAddTenis from '../../Components/ModalAddTenis';
+
 
 const imagensTenis = 
       [ tenisBranco, tenisLaranja, tenisPretoRosa,
@@ -40,13 +42,14 @@ function Home() {
 
   useEffect(() => {
     pedidoGet();
-  })
+  });
 
 
   return (
     <div className={styles.home}>
       <Header />
       <CarouselTenis />
+      <ModalAddTenis />
       <Container >
         {
           data.map((dados, index) =>
@@ -54,7 +57,7 @@ function Home() {
               key={dados.id} 
               imagens={imagensTenis[index % imagensTenis.length]} 
               id={dados.id}
-              titulo={dados.nome}
+              nome={dados.nome}
               descricao={dados.descricao}
               preco={dados.preco}
             />

@@ -1,6 +1,12 @@
 .home { 
     background-color: blanchedalmond;
 }
+
+.home .botaoAddTenis {
+    padding-bottom: 120px;
+}
+
+
   
 @media (width: 400px){
     .home{

@@ -7,8 +7,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function Header() {
     return (
-        <header className={styles.header}>
-            
+        <header className={styles.header}>          
             <a href="/"><img className={styles.image} alt="logo" src={logo} /></a>             
             <nav>
                 <ul className={styles.navlinks}>

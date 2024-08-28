@@ -2,15 +2,16 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100px;
     top: 0;
     border-bottom: 1px solid rgba(114, 114, 114, 0.133);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     position: absolute;
-    padding: 0px 40px;
+    padding: 0px 20px;
     z-index: 9998;
     background-color: #ffffff;
 }
@@ -20,15 +21,18 @@
     width: 120px;
 }
 
+
 .navlinks { 
     display: flex;
+    justify-content: center;
+    text-align: center;
     margin: 0;
     padding-left: 0;
 }
 
 .navlinks .li{ 
     font-family: "Montserrant", sans-serif;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 2.5rem;
     padding-inline: 60px; 
     list-style: none;
@@ -40,9 +44,10 @@
 }
 
 
-.navlinks a{
+.navlinks a {
+    display: block;
     transition: all 0.3s ease 0s;
-    text-decoration: none;
+    text-decoration: none; 
     text-align: center;
     color: #FFA07A;
 }
@@ -85,38 +90,59 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto; /* Permite que o header ajuste a altura conforme o conteúdo */
+        height: auto; 
         padding-top: 16px;
     }
 
     .image {
         margin-bottom: 1rem;
     }
+    .navlinks .li { 
+        font-weight: 800;
+    }
+
 }
+@media (max-width: 932px) {
+    .header {
+            display: flex;
+            flex-direction: column;
+        }
+    .navlinks {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around; 
+        align-items: center;
+    }
+    
+    .navlinks .li {
+        font-weight: 800;
+        flex: 0 1 45%;
+        margin: 5px; 
+    }
+}
+
 
 @media (max-width: 778px) {
     .header {
-        padding-top: 20px;  
+        display: flex;
+        flex-direction: column;
     }
-
     .navlinks { 
         display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-        justify-content: center; /* Centraliza os itens no contêiner */
+        flex-wrap: wrap;
+        justify-content: center;
         margin: 0;
         padding-left: 0;
     }
 
     .navlinks .li { 
         font-family: "Montserrat", sans-serif;
-        font-weight: 500;
+        font-weight: 800;
         font-size: 2.5rem;
         padding-inline: 60px; 
-        list-style: none;
         text-decoration: none;
-        flex: 1 1 50%; /* Cada item ocupa 50% da linha, permitindo dois por linha */
+        flex: 1 1 50%; 
         text-align: center;
-        box-sizing: border-box; /* Garante que padding seja incluído na largura total */
     }
 
     .navlinks .li:first-child { 

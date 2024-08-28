@@ -14,7 +14,6 @@ function CarouselTenis() {
                     alt="Primeiro slide" />
                     <Carousel.Caption className={styles.textos}>
                     <h5>Nike Airmax Azul</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -25,7 +24,6 @@ function CarouselTenis() {
                      />
                     <Carousel.Caption className={styles.textos}>
                     <h5>Nike Airmax Azul</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -36,7 +34,6 @@ function CarouselTenis() {
                      />
                     <Carousel.Caption className={styles.textos}>
                     <h5>Nike Airmax Azul</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> 
                     </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>

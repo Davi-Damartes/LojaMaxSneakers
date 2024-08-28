@@ -2,6 +2,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import styles from "./CarouselTenis.module.css";
 
 import tenisAzul from "../../imagemTenis/TenisAzul.jpg";
+import tenisVerde from "../../imagemTenis/TenisVerde.jpg";
+import tenisAdidas from "../../imagemTenis/TenisAdidas.jpg";
 
 function CarouselTenis() {
     return (
@@ -19,7 +21,7 @@ function CarouselTenis() {
                 <Carousel.Item>
                     <img
                      className={styles.imagens}
-                     src={tenisAzul}
+                     src={tenisVerde}
                      alt="Segundo slide"
                      />
                     <Carousel.Caption className={styles.textos}>
@@ -29,7 +31,7 @@ function CarouselTenis() {
                 <Carousel.Item>
                     <img
                      className={styles.imagens}
-                     src={tenisAzul}
+                     src={tenisAdidas}
                      alt="Terceiro Slide"
                      />
                     <Carousel.Caption className={styles.textos}>

@@ -7,7 +7,7 @@ function CardTenis( {imagens, id, nome, descricao, preco } ) {
     return(
         <section>
             <Card className={styles.card} >
-                <Card.Img className={styles.image} src={imagens} />
+                <Card.Img className={styles.imagem} src={imagens} />
                 <Card.Body className={styles.cardBody}>
                     <Card.Title className={styles.title}>{nome}</Card.Title>
                     <Card.Text className={styles.descricao}>{descricao}</Card.Text>

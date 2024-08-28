@@ -9,17 +9,68 @@
 .carousel{  
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 .imagens {
     align-items: center;
     justify-content: center;
     object-fit: cover;
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
+
 
 .textos h5, p{
     color: rgb(236, 236, 236);
     text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1205px){
+    .container {
+        padding-top: 160px;
+        min-width: 100%;
+    }
+    .imagens {
+        width: 100%;
+        height: 400px;
+    }
+}
+@media (max-width: 942px){
+    .container {
+        padding-top: 260px;
+        width: 100%;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .imagens {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 778px){
+    .container {
+        padding-top: 390px;
+        min-width: 100%;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .imagens {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 600px){
+    .container {
+        padding-top: 360px;
+        min-width: 100%;
+    }
+    .carousel {
+        width: 100%;
+    }
 }

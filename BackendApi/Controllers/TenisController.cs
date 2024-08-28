@@ -82,7 +82,7 @@ namespace BackendApi.Controllers
         }
 
 
-        [HttpDelete("ExluirTenis/{Id:Guid}")]
+        [HttpDelete("ExcluirTenis/{Id:Guid}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

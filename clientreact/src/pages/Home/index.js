@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from "./Home.module.css"
 import axios from 'axios';
 import Header from '../../Components/Header/index';
 import Container from '../../Components/Container';
@@ -16,6 +15,8 @@ import tenisBrancoBege from "../../imagemTenis/TenisBrancoBege.jpeg";
 import tenisBrancoLaranja from "../../imagemTenis/TenisBrancoLaranja.jpeg";
 import tenisAllWhite from "../../imagemTenis/TenisAllWhite.jpeg";
 import tenisLaranjaBranco from "../../imagemTenis/TenisLaranjaBranco.jpeg";
+
+import ModalAddTenis from '../../Components/ModalAddTenis';
 
 
 const imagensTenis = 
@@ -40,13 +41,14 @@ function Home() {
 
   useEffect(() => {
     pedidoGet();
-  })
+  }, []);
 
 
   return (
-    <div className={styles.home}>
+    <section>
       <Header />
       <CarouselTenis />
+      <ModalAddTenis />
       <Container >
         {
           data.map((dados, index) =>
@@ -54,7 +56,7 @@ function Home() {
               key={dados.id} 
               imagens={imagensTenis[index % imagensTenis.length]} 
               id={dados.id}
-              titulo={dados.nome}
+              nome={dados.nome}
               descricao={dados.descricao}
               preco={dados.preco}
             />
@@ -63,7 +65,7 @@ function Home() {
 
       </Container>
       <Footer />
-    </div>
+    </section>
 
   )
 }

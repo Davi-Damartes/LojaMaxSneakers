@@ -12,28 +12,22 @@ function Footer() {
         <footer>
             <Container className={styles.container}>
                 <Row className="justify-content-md-around p-2">
-                    <Col xs="12" sm=""  md="4" lg="4" className={styles.conteudoFooter}>   
-                        <div className="text-center">
-                            <InfoOutlinedIcon/>
-                        </div>             
+                    <Col xs="12" sm="6" md="4" lg="4" className={styles.conteudoFooter}>
+                        <InfoOutlinedIcon />
                         <h4>Quem somos</h4>
                         <p>Política da empresa empresa</p>
                         <p>Política da empresa empresa</p>
                         <p>Política da empresa empresa</p>
                     </Col>
-                    <Col xs="12" sm=""  md="5" lg="4" className={styles.conteudoFooter}> 
-                        <div className="text-center">
-                            <PhoneInTalkOutlinedIcon/>
-                        </div>               
+                    <Col xs="12" sm="6" md="5" lg="4" className={styles.conteudoFooter}>
+                        <PhoneInTalkOutlinedIcon />
                         <h4>Contato</h4>
                         <p>contato@empresa.com empresa</p>
                         <p>contato@empresa.com empresa</p>
                         <p>contato@empresa.com empresa</p>
                     </Col>
-                    <Col xs="12" sm=""  md="5" lg="4" className={styles.conteudoFooter}>   
-                        <div className="text-center">
-                            <QuestionMarkIcon/>
-                        </div>
+                    <Col xs="12" sm="12" md="5" lg="4" className={styles.conteudoFooter}>
+                        <QuestionMarkIcon />
                         <h4>Suporte</h4>
                         <p>suporte@empresa.com empresa</p>
                         <p>suporte@empresa.com empresa</p>

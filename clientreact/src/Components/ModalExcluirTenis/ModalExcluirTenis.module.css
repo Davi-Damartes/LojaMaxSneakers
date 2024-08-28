@@ -1,0 +1,29 @@
+.modal {
+    display: flex;
+
+}
+
+.modal .modalHeader{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.modal .modalBody{
+   text-align: center;
+}
+
+.modal .modalTitle{
+   text-align: center;
+}
+.modal .modalBody p{
+   text-align: center;
+   color: black;
+}
+
+.modal .modalFooter{
+   display: flex;
+   justify-content: space-between;
+}
+

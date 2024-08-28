@@ -1,23 +1,29 @@
 import styles from "./CardTenis.module.css"
 import Card from 'react-bootstrap/Card';
-import ModalComponent from "../ModalComponent";
+import ModalEditarTenis from "../ModalEditarTenis";
+import ModalExcluirTenis from "../ModalExcluirTenis";
 
-function CardTenis( {imagens, id, titulo, descricao, preco } ) {
+function CardTenis( {imagens, id, nome, descricao, preco } ) {
     return(
         <section>
             <Card className={styles.card} >
-                <Card.Img className={styles.image} src={imagens} />
+                <Card.Img className={styles.imagem} src={imagens} />
                 <Card.Body className={styles.cardBody}>
-                    {/* <Card.Text className={styles.id}>{id}</Card.Text> */}
-                    <Card.Title className={styles.title}>{titulo}</Card.Title>
+                    <Card.Title className={styles.title}>{nome}</Card.Title>
                     <Card.Text className={styles.descricao}>{descricao}</Card.Text>
                     <Card.Text className={styles.price}>R$ {preco}</Card.Text>
-                    <ModalComponent 
-                                id={id} 
-                                nome={titulo}
-                                descricao={descricao}
-                                preco={preco}
-                    />
+                    <div className={styles.buttonContainer}>
+                        <ModalEditarTenis
+                            id={id} 
+                            nome={nome}
+                            descricao={descricao}
+                            preco={preco}
+                        />
+                        <ModalExcluirTenis 
+                            id={id}
+                            nome={nome}
+                        />
+                    </div>
                 </Card.Body>
             </Card>
         </section>

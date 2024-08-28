@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import styles from "./ModalComponent.module.css";
+import { useState } from 'react';
+import styles from "./ModalEditarTenis.module.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -53,11 +53,8 @@ function ModalComponent( {id, nome, descricao, preco} ){
           return tenis;
         });
     
-        setData(dadosAtualizados);
-    
-        console.log(response);
-        setShow(false);
-    
+        setData(dadosAtualizados);  
+        setShow(false); 
       } catch (error) {
         console.error(error);
       }
@@ -71,8 +68,9 @@ function ModalComponent( {id, nome, descricao, preco} ){
         </Button>
   
         <Modal show={show} onHide={fecharModal} className={styles.modal}>
-          <Modal.Header closeButton  className={styles.header}>
-            <Modal.Title className={styles.title}>Editar tênis [ {nome} ]</Modal.Title>
+          <Modal.Header closeButton  className={styles.modalHeader}>
+            <Modal.Title className={styles.title}>Editar tênis:</Modal.Title>
+            <Modal.Title className={styles.title}>[{nome}]</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form>

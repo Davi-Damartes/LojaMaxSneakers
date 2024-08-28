@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from "./Home.module.css"
 import axios from 'axios';
 import Header from '../../Components/Header/index';
 import Container from '../../Components/Container';
@@ -42,11 +41,11 @@ function Home() {
 
   useEffect(() => {
     pedidoGet();
-  });
+  }, []);
 
 
   return (
-    <div className={styles.home}>
+    <section>
       <Header />
       <CarouselTenis />
       <ModalAddTenis />
@@ -66,7 +65,7 @@ function Home() {
 
       </Container>
       <Footer />
-    </div>
+    </section>
 
   )
 }

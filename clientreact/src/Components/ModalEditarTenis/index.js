@@ -4,9 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-import axios from 'axios';
+import api from '../../Services/api';
 
-const baseUrl = `https://localhost:7258/api/Tenis/Editar`;
 
 function ModalComponent( {id, nome, descricao, preco} ){
   const [show, setShow] = useState(false);
@@ -35,7 +34,7 @@ function ModalComponent( {id, nome, descricao, preco} ){
 
     const submitForm = async () => {
       try {
-        const response = await axios.put(`${baseUrl}/${tenisSelecionado.id}`, tenisSelecionado);
+        const response = await api.put(`Editar/${tenisSelecionado.id}`, tenisSelecionado);
         
         const resposta = response.data;
     

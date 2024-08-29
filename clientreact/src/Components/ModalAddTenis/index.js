@@ -4,9 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-import axios from 'axios';
+import api from '../../Services/api';
 
-const baseUrl = `https://localhost:7258/api/Tenis/AdicionarTenis`;
 
 function ModalComponentAdd() {
 
@@ -25,7 +24,7 @@ function ModalComponentAdd() {
 
     const addTenisPost = async () => {
      delete novoTenis.id;
-      await axios.post(baseUrl, novoTenis)
+      await api.post(`AdicionarTenis/`, novoTenis)
         .then(response => {
           setData(data.concat(response.data));
           setShow(false);

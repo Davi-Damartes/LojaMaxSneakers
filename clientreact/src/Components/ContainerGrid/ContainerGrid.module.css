@@ -1,0 +1,33 @@
+.containerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding: 0px 1rem;
+    max-width: 1000px;
+    height: 800px;
+    padding-top: 140px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.elementoEsquerda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: cadetblue;
+}
+.elementoEsquerda > h1:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 100%;    background-color: rgb(52, 212, 60); 
+}
+
+
+.elementoDireita {
+    
+    background-color: chocolate;
+}
+
+

@@ -3,9 +3,8 @@ import styles from "./ModalExcluirTenis.module.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import axios from 'axios';
+import api from '../../Services/api';
 
-const baseUrl =  `https://localhost:7258/api/Tenis/ExcluirTenis`
 
 function ModalExcluirTenis({id, nome}) {
   const [show, setShow] = useState(false);
@@ -15,7 +14,7 @@ function ModalExcluirTenis({id, nome}) {
   const abirModal = () => setShow(true);
 
  const submitDelete = async () => {
-        await axios.delete(`${baseUrl}/${id}`)
+        await api.delete(`ExcluirTenis/${id}`)
         .then(response => {
             setData(response.data);
             setShow(false);
@@ -23,7 +22,6 @@ function ModalExcluirTenis({id, nome}) {
             console.log(error, data)
         });
     }
-
 
 
   return (

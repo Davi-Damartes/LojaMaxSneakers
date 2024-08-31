@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Average&family=Matemasie&display=swap');
 
+a {
+    text-decoration: none;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -26,7 +30,6 @@
     padding-top: 0.5rem;
     width: 180px;
     height: 220px;
-
 }
 
 .cardBody {
